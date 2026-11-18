@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="Ustam — freelance marketplace of home-repair masters in Tashkent. Real OLX.uz prices, AI matching, chat with masters." />
+    <meta name="theme-color" content="#f6f5f1" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <title>Ustam — маркетплейс мастеров</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <script>
+      // Apply the saved theme before first paint (no flash).
+      try {
+        var p = JSON.parse(localStorage.getItem('ustam.prefs.v2') || '{}');
+        var dark = p.theme ? p.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
